@@ -8,8 +8,8 @@ import Stat from '../../components/Stat';
 const Home = () => {
     return (
         <div>
-            <TopBar/>
-            <Menu/>
+        
+         
             <Slider/>
             <Services/>
             <Stat/>
