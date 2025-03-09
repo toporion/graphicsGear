@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import logo from '../../assets/logo.png'
 
 export default function Register() {
   const { register, handleSubmit } = useForm();
@@ -62,7 +63,13 @@ export default function Register() {
             {/* Profile Image */}
             <div>
               <label className="block text-gray-700">Profile Image</label>
-              <input type="file" accept="image/*" onChange={handleImageChange} className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
+              <input
+                type="file"
+                accept="image/*"
+                {...register("profileImage")}
+                onChange={handleImageChange}
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+              />
             </div>
 
             {/* Submit Button */}
